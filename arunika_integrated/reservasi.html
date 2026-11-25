@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title data-i18n="reservasi.reservasi_meja_ruang_arunika_crumbs">Reservasi Meja &amp; Ruang — Arunika Crumbs &amp; Brew</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)",
+            "outline": "rgb(var(--c-outline) / <alpha-value>)",
+            "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)",
+            "on-tertiary": "rgb(var(--c-on-tertiary) / <alpha-value>)",
+            "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)",
+            "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
+            "secondary-fixed": "rgb(var(--c-secondary-fixed) / <alpha-value>)",
+            "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)",
+            "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)",
+            "secondary-fixed-dim": "rgb(var(--c-secondary-fixed-dim) / <alpha-value>)",
+            "tertiary-fixed": "rgb(var(--c-tertiary-fixed) / <alpha-value>)",
+            "secondary": "rgb(var(--c-secondary) / <alpha-value>)",
+            "error": "rgb(var(--c-error) / <alpha-value>)",
+            "on-tertiary-container": "rgb(var(--c-on-tertiary-container) / <alpha-value>)",
+            "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)",
+            "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)",
+            "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
+            "on-secondary-fixed": "rgb(var(--c-on-secondary-fixed) / <alpha-value>)",
+            "on-tertiary-fixed": "rgb(var(--c-on-tertiary-fixed) / <alpha-value>)",
+            "on-tertiary-fixed-variant": "rgb(var(--c-on-tertiary-fixed-variant) / <alpha-value>)",
+            "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)",
+            "tertiary-fixed-dim": "rgb(var(--c-tertiary-fixed-dim) / <alpha-value>)",
+            "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)",
+            "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)",
+            "primary": "rgb(var(--c-primary) / <alpha-value>)",
+            "on-secondary-fixed-variant": "rgb(var(--c-on-secondary-fixed-variant) / <alpha-value>)",
+            "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)",
+            "on-background": "rgb(var(--c-on-background) / <alpha-value>)",
+            "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)",
+            "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)",
+            "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)",
+            "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)",
+            "tertiary-container": "rgb(var(--c-tertiary-container) / <alpha-value>)",
+            "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)",
+            "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)",
+            "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)",
+            "background": "rgb(var(--c-background) / <alpha-value>)",
+            "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)",
+            "error-container": "rgb(var(--c-error-container) / <alpha-value>)",
+            "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)",
+            "surface": "rgb(var(--c-surface) / <alpha-value>)",
+            "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)",
+            "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)",
+            "tertiary": "rgb(var(--c-tertiary) / <alpha-value>)",
+            "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)",
+            "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)",
+            "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)"
+          },
+          fontFamily: {
+            "headline-sm": ["Playfair Display", "serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "display-lg": ["Playfair Display", "serif"],
+            "price-lg": ["Playfair Display", "serif"],
+            "body-sm": ["DM Sans", "sans-serif"],
+            "body-md": ["DM Sans", "sans-serif"],
+            "body-lg": ["DM Sans", "sans-serif"],
+            "label-md": ["DM Sans", "sans-serif"],
+            "label-lg": ["DM Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .main-site-container {
+      width: 100%;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(1rem, 3.5vw, 3rem);
+      padding-right: clamp(1rem, 3.5vw, 3rem);
+    }
+    @media (min-width: 1440px) {
+      .main-site-container {
+        max-width: 1440px;
+      }
+    }
+  </style>
+<script>(function(){try{var d=document.documentElement,m=localStorage.getItem('arunika_theme');if(m==='dark'||(!m&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark');var l=localStorage.getItem('arunika_lang');if(l==='en'||l==='id')d.lang=l;else if(((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase().indexOf('en')===0)d.lang='en'}catch(e){}})();</script>
+<link href="theme.css" rel="stylesheet"/>
+</head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-fixed">
+<!-- ==================== TOP NAVIGATION HEADER ==================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-surface-variant/40 pt-safe">
+<div class="fluid-container h-16 md:h-20 flex items-center justify-between gap-3">
+<a aria-label="Arunika Crumbs &amp; Brew" class="flex flex-col justify-center select-none group shrink-0" href="index.html">
+<span class="font-headline-sm text-2xl md:text-3xl text-secondary leading-none tracking-tight group-hover:text-primary transition-colors">Arunika</span>
+<span class="font-label-md text-[9px] md:text-[10px] tracking-[0.28em] text-on-surface-variant font-semibold uppercase mt-0.5">CRUMBS &amp; BREW</span>
+</a>
+<nav aria-label="Navigasi utama" class="hidden lg:flex items-center space-x-0.5 xl:space-x-2" data-i18n-attr="aria-label:nav.main">
+<a class="px-3 xl:px-4 py-2 rounded-full font-label-lg text-[15px] text-on-surface-variant hover:text-secondary hover:bg-surface-container/40 transition-colors" data-i18n="nav.home" data-path="beranda" href="index.html">Beranda</a>
+<a class="px-3 xl:px-4 py-2 rounded-full font-label-lg text-[15px] text-on-surface-variant hover:text-secondary hover:bg-surface-container/40 transition-colors" data-i18n="nav.menu" data-path="menu" href="menu.html">Menu</a>
+<a class="px-3 xl:px-4 py-2 rounded-full font-label-lg text-[15px] text-on-surface-variant hover:text-secondary hover:bg-surface-container/40 transition-colors" data-i18n="nav.services" data-path="layanan" href="layanan.html">Layanan</a>
+<a aria-current="page" class="px-3 xl:px-4 py-2 rounded-full font-label-lg text-[15px] font-semibold text-primary bg-surface-container/60 transition-colors" data-i18n="nav.reserve" data-path="reservasi" href="reservasi.html">Reservasi</a>
+<a class="px-3 xl:px-4 py-2 rounded-full font-label-lg text-[15px] text-on-surface-variant hover:text-secondary hover:bg-surface-container/40 transition-colors" data-i18n="nav.loc_contact" data-path="kontak" href="lokasi-kontak.html">Lokasi &amp; Kontak</a>
+<a class="px-3 xl:px-4 py-2 rounded-full font-label-lg text-[15px] text-on-surface-variant hover:text-secondary hover:bg-surface-container/40 transition-colors" data-i18n="nav.faq" data-path="faq" href="faq.html">FAQ</a>
+</nav>
+<div class="flex items-center gap-1 sm:gap-2.5">
+<div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-xs md:text-sm">
+<span aria-hidden="true" class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-md whitespace-nowrap text-on-surface-variant font-medium" data-open-status>Buka</span>
+</div>
+<div aria-label="Pilih bahasa" class="lang-toggle" data-i18n-attr="aria-label:nav.lang" role="group">
+<button aria-pressed="true" class="lang-btn" data-i18n-attr="title:index.bahasa_indonesia" data-lang="id" lang="id" title="Bahasa Indonesia" type="button">ID</button>
+<button aria-pressed="false" class="lang-btn" data-i18n-attr="title:index.english" data-lang="en" lang="en" title="English" type="button">EN</button>
+</div>
+<button aria-label="Beralih mode malam" class="w-10 h-10 flex items-center justify-center rounded-full text-secondary hover:bg-surface-container active:scale-95 transition-all" data-i18n-attr="aria-label:nav.theme_dark" data-theme-toggle="" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]">dark_mode</span>
+</button>
+<a aria-label="Keranjang" class="relative w-10 h-10 flex items-center justify-center rounded-full text-secondary hover:bg-surface-container active:scale-95 transition-all" data-cart-link="" data-i18n-attr="aria-label:index.keranjang" href="keranjang.html">
+<span aria-hidden="true" class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="cart-badge" data-cart-badge="" hidden="">0</span>
+</a>
+</div>
+</div>
+</header>
+<!-- ==================== MAIN CONTENT AREA ==================== -->
+<main class="flex-1 w-full pt-20 lg:pt-28 pb-28 lg:pb-16 bg-surface">
+<div class="main-site-container">
+<section class="pt-4 pb-8 lg:pb-10"><div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/50 text-secondary mb-3"><span aria-hidden="true" class="material-symbols-outlined text-[16px]">calendar_month</span><span class="font-label-md text-xs font-semibold" data-i18n="index.reservasi_meja">Reservasi Meja</span></div>
+<h1 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-secondary font-semibold leading-tight tracking-tight" data-i18n="index.reservasi_meja">Reservasi Meja</h1>
+<p class="font-body-md text-base lg:text-lg text-on-surface-variant mt-3 leading-relaxed" data-i18n="reservasi.pilih_tanggal_jam_dan_jumlah">Pilih tanggal, jam, dan jumlah tamu. Sisanya kita lanjutkan lewat WhatsApp.</p>
+</div></section>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-7 space-y-6">
+<div class="p-5 md:p-7 rounded-3xl bg-surface-container-low shadow-[0_4px_24px_-2px_rgba(120,87,68,0.08)] border border-surface-variant/40">
+<div class="flex items-center gap-3 mb-6 pb-4 border-b border-surface-variant/50">
+<div class="w-11 h-11 rounded-2xl bg-surface-container flex items-center justify-center text-primary-container shrink-0"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">edit_note</span></div>
+<div><h2 class="font-headline-sm text-xl md:text-2xl text-secondary font-semibold leading-tight" data-i18n="reservasi.rincian_kunjungan">Rincian Kunjungan</h2>
+<p class="font-label-md text-xs md:text-sm text-on-surface-variant mt-0.5" data-i18n="reservasi.tiga_pilihan_saja_tanpa_perlu">Isi nama, nomor WhatsApp, tanggal, jam, dan jumlah tamu.</p></div></div>
+<form class="space-y-5" id="reservation-form" novalidate="">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+<div aria-labelledby="lbl-name" role="group">
+<p class="font-label-md text-sm text-secondary font-medium mb-1.5" data-i18n="res.name_label" id="lbl-name">Nama *</p>
+<div class="relative flex items-center"><span aria-hidden="true" class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">person</span>
+<input aria-describedby="name-error" aria-labelledby="lbl-name" autocomplete="name" class="w-full h-12 rounded-xl bg-surface-container text-on-surface font-body-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary-container border-0 transition-all pl-11 pr-4" data-i18n-attr="placeholder:res.name_ph" id="name-input" maxlength="60" name="name" placeholder="Nama kamu" type="text"/></div>
+<p class="text-xs text-error mt-1 min-h-[1rem]" id="name-error" role="alert"></p>
+</div>
+<div aria-labelledby="lbl-phone" role="group">
+<p class="font-label-md text-sm text-secondary font-medium mb-1.5" data-i18n="res.phone_label" id="lbl-phone">Nomor WhatsApp *</p>
+<div class="relative flex items-center"><span aria-hidden="true" class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">call</span>
+<input aria-describedby="phone-error" aria-labelledby="lbl-phone" autocomplete="tel" class="w-full h-12 rounded-xl bg-surface-container text-on-surface font-body-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary-container border-0 transition-all pl-11 pr-4" data-i18n-attr="placeholder:res.phone_ph" id="phone-input" inputmode="tel" maxlength="18" name="phone" placeholder="08xx xxxx xxxx" type="tel"/></div>
+<p class="text-xs text-error mt-1 min-h-[1rem]" id="phone-error" role="alert"></p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+<div aria-labelledby="lbl-date" class="relative" id="date-wrap" role="group">
+<p class="font-label-md text-sm text-secondary font-medium mb-1.5" data-i18n="reservasi.tanggal_kunjungan" id="lbl-date">Tanggal Kunjungan *</p>
+<button aria-controls="date-pop" aria-expanded="false" aria-haspopup="dialog" aria-labelledby="lbl-date date-btn-text" class="w-full h-12 rounded-xl bg-surface-container text-on-surface font-body-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary-container border-0 transition-all px-4 flex items-center justify-between gap-2 text-left" id="date-btn" type="button">
+<span class="truncate text-on-surface-variant" data-i18n="res.date_ph" id="date-btn-text">Pilih tanggal kunjungan</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0">calendar_month</span></button>
+<div aria-label="Kalender" class="pop-panel" hidden id="date-pop" role="dialog">
+<div id="calendar">
+<div class="flex items-center justify-between mb-2">
+<button aria-label="Bulan sebelumnya" class="cal-nav qty-btn" data-i18n-attr="aria-label:res.cal_prev" id="cal-prev" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">chevron_left</span></button>
+<p aria-live="polite" class="font-label-lg text-sm text-secondary font-semibold capitalize" id="cal-title"></p>
+<button aria-label="Bulan berikutnya" class="cal-nav qty-btn" data-i18n-attr="aria-label:res.cal_next" id="cal-next" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">chevron_right</span></button>
+</div>
+<div aria-hidden="true" class="cal-grid mb-1" id="cal-weekdays"></div>
+<div class="cal-grid" id="cal-days" role="grid"></div>
+</div>
+<p class="sr-only" id="date-picked"></p>
+</div>
+<p class="text-xs text-error mt-1 min-h-[1rem]" id="date-error" role="alert"></p>
+</div>
+<div aria-labelledby="lbl-time" class="relative" id="time-wrap" role="group">
+<div class="flex items-center justify-between mb-1.5 gap-2"><p class="font-label-md text-sm text-secondary font-medium" data-i18n="reservasi.jam_kedatangan" id="lbl-time">Jam Kedatangan *</p>
+<span class="font-label-md text-[11px] text-on-surface-variant bg-surface-container/60 px-2 py-0.5 rounded-full" data-i18n="res.open_badge">Buka 08.00–22.00</span></div>
+<button aria-controls="time-pop" aria-expanded="false" aria-haspopup="dialog" aria-labelledby="lbl-time time-btn-text" class="w-full h-12 rounded-xl bg-surface-container text-on-surface font-body-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary-container border-0 transition-all px-4 flex items-center justify-between gap-2 text-left" id="time-btn" type="button">
+<span class="truncate text-on-surface-variant" data-i18n="res.time_ph" id="time-btn-text">Pilih jam kedatangan</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0">schedule</span></button>
+<div aria-label="Jam" class="pop-panel pop-panel-time" hidden id="time-pop" role="dialog">
+<div class="flex items-center justify-center gap-2 sm:gap-3">
+<div class="text-center"><p class="text-[11px] uppercase tracking-wider text-on-surface-variant mb-1" data-i18n="res.hour">Jam</p>
+<div aria-label="Jam" class="wheel" data-i18n-attr="aria-label:res.hour" id="wheel-h" role="listbox" tabindex="0"></div></div>
+<span aria-hidden="true" class="font-headline-sm text-2xl text-secondary font-bold pt-5">:</span>
+<div class="text-center"><p class="text-[11px] uppercase tracking-wider text-on-surface-variant mb-1" data-i18n="res.minute">Menit</p>
+<div aria-label="Menit" class="wheel" data-i18n-attr="aria-label:res.minute" id="wheel-m" role="listbox" tabindex="0"></div></div>
+</div>
+<p class="text-center mt-2 font-label-md text-xs text-secondary font-semibold" aria-live="polite" id="time-readout"></p>
+<button class="mt-2 w-full h-10 rounded-xl bg-primary-container text-surface font-label-md text-sm font-semibold hover:opacity-95 active:scale-[0.98] transition-all" data-i18n="res.done" id="time-done" type="button">Selesai</button>
+</div>
+<p class="text-xs text-on-surface-variant mt-1" id="time-hint"></p>
+<p class="text-xs text-error min-h-[1rem]" id="time-error" role="alert"></p>
+</div>
+</div>
+<div aria-labelledby="lbl-guests" role="group">
+<p class="font-label-md text-sm text-secondary font-medium mb-1.5" data-i18n="reservasi.jumlah_tamu" id="lbl-guests">Jumlah Tamu *</p>
+<div class="relative flex items-center"><span aria-hidden="true" class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">group</span>
+<input aria-describedby="guest-error" aria-labelledby="lbl-guests" autocomplete="off" class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container text-on-surface font-body-md text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary-container border-0 transition-all" data-i18n-attr="placeholder:res.guests_ph" id="guest-input" inputmode="numeric" min="1" name="guests" placeholder="Ketik jumlah, mis. 3" step="1" type="number"/></div>
+<p class="text-xs text-error mt-1.5 min-h-[1rem]" id="guest-error" role="alert"></p>
+</div>
+</form>
+</div>
+<div aria-labelledby="po-title" class="p-5 md:p-7 rounded-3xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] border border-surface-variant/40">
+<div class="flex items-start justify-between gap-3 mb-4">
+<div class="flex items-center gap-3"><div class="w-11 h-11 rounded-2xl bg-surface-container flex items-center justify-center text-primary-container shrink-0"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">restaurant_menu</span></div>
+<div><h2 class="font-headline-sm text-xl md:text-2xl text-secondary font-semibold leading-tight" data-i18n="reservasi.pesan_menu_sekarang" id="po-title">Pesan Menu Sekarang</h2>
+<p class="font-label-md text-xs md:text-sm text-on-surface-variant mt-0.5" data-i18n="reservasi.preorder_agar_pesananmu_siap_saat">Pre-order agar pesananmu siap saat kamu tiba.</p></div></div>
+<span class="font-label-md text-[11px] text-on-surface-variant bg-surface-container px-2.5 py-0.5 rounded-full font-medium shrink-0" data-i18n="res.optional">Opsional</span></div>
+<div aria-label="Kategori menu" class="flex gap-2 overflow-x-auto pb-2 scrollbar-none" data-i18n-attr="aria-label:res.po_cats" id="po-tabs" role="tablist"></div>
+<ul class="mt-3 space-y-2 max-h-[26rem] overflow-y-auto pr-1" id="po-list" role="tabpanel" tabindex="0"></ul>
+<div class="mt-4 pt-4 border-t border-surface-variant/50 flex flex-wrap items-center justify-between gap-3">
+<p aria-live="polite" class="font-label-md text-sm text-secondary font-semibold" id="po-summary"></p>
+<div class="flex items-center gap-3"><button class="text-xs font-semibold text-on-surface-variant underline underline-offset-2 hover:text-secondary" data-i18n="res.po_clear" hidden="" id="po-clear" type="button">Kosongkan</button>
+<a class="text-xs font-semibold text-primary-container hover:underline" data-i18n="res.po_cart" href="keranjang.html">Lihat keranjang</a></div></div>
+</div>
+</div>
+<div class="lg:col-span-5 lg:sticky lg:top-24 space-y-6">
+<div class="p-5 md:p-6 rounded-3xl bg-surface-container-low shadow-[0_4px_24px_-2px_rgba(120,87,68,0.08)] border border-surface-variant/40">
+<div class="flex items-center justify-between mb-3.5"><div class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-[20px] text-primary-container">preview</span>
+<h2 class="font-headline-sm text-lg text-secondary font-semibold" data-i18n="reservasi.pratinjau_pesan_whatsapp">Pratinjau Pesan WhatsApp</h2></div>
+<span class="font-label-md text-[11px] text-on-surface-variant bg-surface-container px-2.5 py-0.5 rounded-full font-medium" data-i18n="res.auto">Otomatis Terisi</span></div>
+<div class="wa-frame p-4 rounded-2xl shadow-inner">
+<div class="flex items-center gap-2.5 mb-3 pb-2.5 border-b border-[#d1d7db]/70"><div class="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center"><span aria-hidden="true" class="material-symbols-outlined text-[18px]">chat</span></div>
+<div class="flex-1 min-w-0"><p class="font-label-md text-xs font-semibold leading-tight truncate">Arunika Crumbs &amp; Brew</p><span class="font-label-md text-[10px] opacity-70" data-i18n="reservasi.whatsapp_62_85843210898">WhatsApp +62 851-7547-4311</span></div></div>
+<div class="wa-bubble p-3.5 rounded-xl text-xs md:text-sm leading-relaxed shadow-sm"><div class="font-mono text-xs md:text-[13px] whitespace-pre-wrap leading-relaxed break-words" id="wa-preview-text"></div>
+<div class="flex justify-end items-center gap-1 mt-2.5 opacity-70"><span class="font-label-md text-[10px]" id="wa-time"></span><span aria-hidden="true" class="material-symbols-outlined text-[14px]">done_all</span></div></div>
+</div>
+<div class="mt-4">
+<a aria-describedby="wa-hint" aria-disabled="true" class="wa-cta w-full py-4 px-6 rounded-2xl bg-primary-container text-surface flex items-center justify-center gap-3 shadow-[0_12px_28px_-4px_rgba(83,97,36,0.4)] hover:opacity-95 active:scale-[0.98] transition-all" id="btn-submit-whatsapp" rel="noopener noreferrer" tabindex="-1" target="_blank">
+<span aria-hidden="true" class="material-symbols-outlined text-[22px]">send</span><span class="font-headline-sm text-base md:text-lg font-semibold" data-i18n="res.send">Kirim Reservasi via WhatsApp</span></a>
+<p class="font-label-md text-xs text-center text-on-surface-variant mt-2.5" id="wa-hint" role="status"></p></div>
+</div>
+<div class="p-5 md:p-6 rounded-3xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] border border-surface-variant/40">
+<div class="flex items-center gap-2 mb-4"><span aria-hidden="true" class="material-symbols-outlined text-tertiary text-[20px]">info</span><h2 class="font-headline-sm text-base lg:text-lg text-secondary font-semibold" data-i18n="reservasi.ketentuan_kebijakan_reservasi">Ketentuan &amp; Kebijakan Reservasi</h2></div>
+<ul class="space-y-3.5">
+<li class="flex items-start gap-3"><span aria-hidden="true" class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-fixed shrink-0 flex items-center justify-center mt-0.5 font-bold text-xs">1</span><div><p class="font-label-md text-xs sm:text-sm font-semibold text-secondary" data-i18n="reservasi.status_konfirmasi_resmi">Status Konfirmasi Resmi</p><p class="font-body-sm text-xs text-on-surface-variant leading-relaxed" data-i18n="reservasi.reservasi_sah_setelah_staf_arunika">Reservasi sah setelah staf Arunika membalas dan mengonfirmasi nomor meja via WhatsApp.</p></div></li>
+<li class="flex items-start gap-3"><span aria-hidden="true" class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-fixed shrink-0 flex items-center justify-center mt-0.5 font-bold text-xs">2</span><div><p class="font-label-md text-xs sm:text-sm font-semibold text-secondary" data-i18n="reservasi.toleransi_waktu_kedatangan">Toleransi Waktu Kedatangan</p><p class="font-body-sm text-xs text-on-surface-variant leading-relaxed" data-i18n="reservasi.meja_ditahan_maksimal_15_menit">Meja ditahan maksimal <strong>15 menit</strong> sebelum dialihkan ke antrean walk-in bila tanpa konfirmasi.</p></div></li>
+<li class="flex items-start gap-3"><span aria-hidden="true" class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-fixed shrink-0 flex items-center justify-center mt-0.5 font-bold text-xs">3</span><div><p class="font-label-md text-xs sm:text-sm font-semibold text-secondary" data-i18n="reservasi.bebas_biaya_reservasi_meja">Bebas Biaya Reservasi Meja</p><p class="font-body-sm text-xs text-on-surface-variant leading-relaxed" data-i18n="reservasi.gratis_untuk_meja_dinein_standar">Gratis untuk meja dine-in standar. Hanya ruang meeting privat atau gathering yang memerlukan DP.</p></div></li>
+<li class="flex items-start gap-3"><span aria-hidden="true" class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-fixed shrink-0 flex items-center justify-center mt-0.5 font-bold text-xs">4</span><div><p class="font-label-md text-xs sm:text-sm font-semibold text-secondary" data-i18n="reservasi.jam_pelayanan_reservasi">Jam Pelayanan Reservasi</p><p class="font-body-sm text-xs text-on-surface-variant leading-relaxed" data-i18n="reservasi.kafe_buka_08002200_wib_setiap">Kafe buka <strong>08.00–22.00 WIB</strong> setiap hari. Admin merespons chat pukul 08.00–21.00 WIB.</p></div></li>
+</ul>
+<p class="mt-4 pt-4 border-t border-surface-variant/50 font-body-sm text-xs text-on-surface-variant"><span data-i18n="reservasi.butuh_bantuan_lain">Butuh bantuan lain?</span><a class="text-primary-container font-semibold hover:underline" data-i18n="reservasi.hubungi_kami" href="lokasi-kontak.html">Hubungi kami</a>.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- ==================== RESPONSIVE FOOTER ==================== -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30 pt-12 pb-24 md:pb-12 text-on-surface-variant">
+<div class="custom-container flex flex-col gap-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Col 1: Brand -->
+<div class="flex flex-col gap-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-2xl text-secondary font-semibold tracking-tight">Arunika</span>
+<span class="font-label-md text-[10px] tracking-[0.2em] text-on-surface-variant font-semibold uppercase">CRUMBS &amp; BREW · SURABAYA</span>
+</div>
+<p class="font-body-sm text-sm text-on-surface-variant italic" data-i18n="index.coffee_comfort_and_little_moments">
+            Coffee, Comfort, and Little Moments.
+          </p>
+<p class="font-body-sm text-xs leading-relaxed mt-1" data-i18n="lokasi.ruang_temu_ramah_dan_artisanal">
+            Ruang temu ramah dan artisanal bakery di Surabaya Timur untuk melengkapi setiap perbincangan berharga Anda.
+          </p>
+</div>
+<!-- Col 2: Navigation -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-xs font-bold uppercase tracking-wider text-secondary" data-i18n="index.navigasi_cepat">Navigasi Cepat</span>
+<ul class="flex flex-col gap-2 font-body-sm text-sm">
+<li><a class="hover:text-secondary transition-colors" href="index.html"><span data-i18n="nav.home">Beranda</span></a></li>
+<li><a class="hover:text-secondary transition-colors" href="menu.html"><span data-i18n="nav.menu">Menu</span></a></li>
+<li><a class="hover:text-secondary transition-colors" href="layanan.html"><span data-i18n="nav.services">Layanan</span></a></li>
+<li><a class="hover:text-secondary transition-colors" href="reservasi.html"><span data-i18n="nav.reserve">Reservasi</span></a></li>
+<li><a class="hover:text-secondary transition-colors" href="lokasi-kontak.html"><span data-i18n="nav.loc_contact">Lokasi &amp; Kontak</span></a></li>
+<li><a class="hover:text-secondary transition-colors" href="faq.html"><span data-i18n="nav.faq">FAQ</span></a></li>
+</ul>
+</div>
+<!-- Col 3: Hours & Location -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-xs font-bold uppercase tracking-wider text-secondary" data-i18n="index.jam_alamat">Jam &amp; Alamat</span>
+<p class="font-body-sm text-xs leading-relaxed" data-i18n="lokasi.ruko_promenade_jl_dr_ir_2">
+            Ruko Promenade, Jl. Dr. Ir. H. Soekarno (MERR), Kedung Baruk, Rungkut, Surabaya 60298
+          </p>
+<div class="flex flex-col text-xs gap-1 mt-1">
+<span class="font-semibold text-secondary" data-i18n="reservasi.senin_minggu_0800_2200_wib">Senin – Minggu: 08.00 – 22.00 WIB</span>
+<span data-i18n="lokasi.kitchen_closed_2115_wib">Kitchen Closed: 21.15 WIB</span>
+<span data-i18n="lokasi.coffee_bar_closed_2130_wib">Coffee Bar Closed: 21.30 WIB</span>
+</div>
+</div>
+<!-- Col 4: Social & Contacts -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-xs font-bold uppercase tracking-wider text-secondary" data-i18n="index.sosial_kontak">Sosial &amp; Kontak</span>
+<div class="flex flex-col gap-2 font-body-sm text-xs">
+<a class="hover:text-secondary transition-colors flex items-center gap-1.5" href="https://wa.me/6285175474311" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-primary">chat</span><span data-i18n="lokasi.whatsapp_0858_4321_0898">WhatsApp: 0851 7547 4311</span></a>
+<a class="hover:text-secondary transition-colors flex items-center gap-1.5" href="mailto:halo@arunikacrumbs.com">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+              halo@arunikacrumbs.com
+            </a>
+<a class="hover:text-secondary transition-colors flex items-center gap-1.5" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">photo_camera</span>
+<span data-i18n="index.instagram">Instagram:</span> @arunika.crumbs
+            </a>
+</div>
+</div>
+</div>
+<!-- Copyright Bottom Bar -->
+<div class="pt-6 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant/70">
+<span data-i18n="index.copyright">© 2026 Arunika Crumbs &amp; Brew. Hak cipta dilindungi.</span>
+<div class="flex items-center gap-4">
+<a class="hover:underline" data-i18n="menu.kebijakan_privasi" href="privasi.html">Kebijakan Privasi</a>
+<span>·</span>
+<a class="hover:underline" data-i18n="menu.syarat_layanan" href="syarat.html">Syarat Layanan</a>
+<span>·</span>
+<a class="hover:underline" data-i18n="lokasi.bantuan_reservasi" href="reservasi.html">Bantuan Reservasi</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+<aside class="fixed right-4 sm:right-6 bottom-20 md:bottom-8 z-40">
+<a aria-label="Chat via WhatsApp" class="w-13 h-13 min-w-[52px] min-h-[52px] rounded-full bg-primary-container text-surface flex items-center justify-center shadow-[0_12px_32px_-4px_rgba(83,97,36,0.35),0_4px_12px_-2px_rgba(120,87,68,0.15)] active:scale-95 transition-all hover:scale-105 hover:bg-primary" data-i18n-attr="aria-label:index.chat_via_whatsapp" href="https://wa.me/6285175474311" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+</a>
+</aside>
+<!-- ==================== MOBILE BOTTOM TAB BAR (< 768px ONLY) ==================== -->
+<nav aria-label="Navigasi bawah" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 pb-safe bg-surface/95 backdrop-blur-xl border-t border-surface-variant/40 shadow-[0_-4px_20px_rgba(120,87,68,0.08)]" data-i18n-attr="aria-label:nav.bottom">
+<div class="flex justify-around items-stretch h-16 px-1">
+<a class="flex flex-col items-center justify-center min-w-0 min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="beranda" href="index.html"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">home</span><span class="font-label-md text-[10px] mt-0.5 truncate max-w-full" data-i18n="nav.home">Beranda</span></a>
+<a class="flex flex-col items-center justify-center min-w-0 min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="menu" href="menu.html"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-md text-[10px] mt-0.5 truncate max-w-full" data-i18n="nav.menu">Menu</span></a>
+<a class="flex flex-col items-center justify-center min-w-0 min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="layanan" href="layanan.html"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">room_service</span><span class="font-label-md text-[10px] mt-0.5 truncate max-w-full" data-i18n="nav.services">Layanan</span></a>
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-0 min-h-[48px] flex-1 text-primary font-semibold transition-all" data-path="reservasi" href="reservasi.html"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">event_seat</span><span class="font-label-md text-[10px] mt-0.5 truncate max-w-full" data-i18n="nav.reserve">Reservasi</span></a>
+<a class="flex flex-col items-center justify-center min-w-0 min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="kontak" href="lokasi-kontak.html"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-md text-[10px] mt-0.5 truncate max-w-full" data-i18n="nav.loc_contact">Lokasi &amp; Kontak</span></a>
+<a class="flex flex-col items-center justify-center min-w-0 min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="faq" href="faq.html"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">help</span><span class="font-label-md text-[10px] mt-0.5 truncate max-w-full" data-i18n="nav.faq">FAQ</span></a>
+</div>
+</nav>
+<!-- ==================== JAVASCRIPT CONTROLLERS ==================== -->
+<script src="menu-data.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+<script src="reservasi.js"></script>
+<script src="integration.js"></script>
+</body></html>

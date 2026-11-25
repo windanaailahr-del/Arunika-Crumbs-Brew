@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Layanan - Arunika Crumbs &amp; Brew</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#fbf3e1", "outline": "#76786a", "inverse-primary": "#bdce85", "on-tertiary": "#ffffff", "outline-variant": "#c7c8b7", "on-primary": "#ffffff", "secondary-fixed": "#ffdbc9", "inverse-surface": "#343024", "surface-bright": "#fff9ee", "secondary-fixed-dim": "#e9bea6", "tertiary-fixed": "#ffdcc0", "secondary": "#785744", "error": "#ba1a1a", "on-tertiary-container": "#ffc99b", "on-surface-variant": "#46483b", "primary-fixed": "#d9ea9e", "on-error": "#ffffff", "on-secondary-fixed": "#2d1607", "on-tertiary-fixed": "#2d1600", "on-tertiary-fixed-variant": "#6b3b00", "on-primary-container": "#cbdc91", "tertiary-fixed-dim": "#ffb877", "surface-tint": "#566427", "secondary-container": "#fed1b9", "primary": "#3c490e", "on-secondary-fixed-variant": "#5e402e", "surface-dim": "#e1d9c8", "on-background": "#1e1b11", "on-primary-fixed-variant": "#3f4c11", "surface-container-high": "#efe8d6", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "tertiary-container": "#854e12", "on-primary-fixed": "#171e00", "primary-container": "#536124", "on-surface": "#1e1b11", "background": "#fff9ee", "inverse-on-surface": "#f8f0de", "error-container": "#ffdad6", "surface-variant": "#eae2d0", "surface": "#fff9ee", "surface-container": "#f5eddb", "on-secondary-container": "#795845", "tertiary": "#673800", "primary-fixed-dim": "#bdce85", "on-secondary": "#ffffff", "surface-container-highest": "#eae2d0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2.5rem", "margin-mobile": "1.25rem", "space-md": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Playfair Display"], "label-md": ["DM Sans"], "display-lg": ["Playfair Display"], "body-sm": ["DM Sans"], "label-lg": ["DM Sans"], "headline-lg": ["Playfair Display"], "body-lg": ["DM Sans"], "display-lg-mobile": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "price-lg": ["Playfair Display"], "body-md": ["DM Sans"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "price-lg": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; min-height: max(884px, 100dvh); } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex flex-col justify-center select-none"><span class="font-headline-sm text-headline-sm font-semibold text-secondary leading-none tracking-tight">Arunika</span><span class="font-label-md text-[10px] tracking-[0.25em] text-on-surface-variant font-semibold uppercase mt-0.5">CRUMBS &amp; BREW</span></div><div class="flex items-center gap-space-xs"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md whitespace-nowrap text-on-surface-variant font-medium">Buka · tutup 22.00</span></div><button aria-label="Beralih mode malam" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:bg-surface-container active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button></div></div></header><main class="flex-1 w-full pt-16 bg-surface pb-36"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-secondary-container/50 text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px] text-tertiary">spa</span>
+<span class="font-label-md text-label-md font-semibold tracking-wide uppercase">Hospitality &amp; Space</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-secondary mt-1 tracking-tight">Fasilitas &amp; Layanan</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Kenyamanan setiap momen, mulai dari secangkir kopi pagi, ruang produktif untuk bekerja, hingga perayaan hangat bersama komunitas.
+    </p>
+</section>
+<!-- Quick Category Tabs / Filter Chips -->
+<section class="w-full overflow-x-auto no-scrollbar px-gutter-mobile pb-space-md -mt-1">
+<div class="flex items-center gap-2 min-w-max" id="service-filter-group">
+<button class="filter-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium transition-all duration-200 bg-primary-container text-surface shadow-[0_2px_8px_-1px_rgba(83,97,36,0.25)]" data-target="all">
+        Semua Layanan
+      </button>
+<button class="filter-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium transition-all duration-200 bg-surface-container text-on-surface-variant hover:bg-surface-variant active:scale-95" data-target="facilities">
+        Ruang &amp; Suasana
+      </button>
+<button class="filter-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium transition-all duration-200 bg-surface-container text-on-surface-variant hover:bg-surface-variant active:scale-95" data-target="catering">
+        Catering &amp; Event
+      </button>
+<button class="filter-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium transition-all duration-200 bg-surface-container text-on-surface-variant hover:bg-surface-variant active:scale-95" data-target="flow">
+        Pemesanan Praktis
+      </button>
+</div>
+</section>
+<!-- Interactive Atmosphere Showcase Mini-Gallery -->
+<section class="px-gutter-mobile pb-space-lg">
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)]">
+<div class="h-44 w-full bg-cover bg-center" data-alt="Warm modern sunlit boutique cafe interior at Arunika Crumbs &amp; Brew. Natural light pours through sheer linen curtains onto warm oak communal tables, comfortable ergonomic wooden chairs, indoor potted fiddle leaf figs, and delicate ceramic mugs of latte art. The space radiates calmness and serene hospitality in Surabaya." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKA9coWLG4VLmZkR9f4chtTflzDrjytWkWTIV8AA7_TOgymnW5Pk0KvQb6dpZvyJH6LB932IPYTPrFBmivFhi0mMOJ_h3AvV0Wc6GWw9cEX-nZsgDI6tImr6IFikDSvLfxjbvWku4bc8rGhR7vIzV_K0q1Frf5DxysOGqlRM4ajgsS9NJCsvs4GHDkKEGajrl3p8xyrEl79UnSPu41Vwl2WMeVBjjKJ1Z4k2dASkuq')">
+<div class="w-full h-full bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/30 to-transparent flex flex-col justify-end p-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-semibold">Suasana Arunika</span>
+<p class="font-headline-sm text-headline-sm text-surface font-semibold">Sudut Teduh untuk Berpikir &amp; Bersua</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kapasitas Indoor &amp; Semi-Outdoor 60+ Kursi</span>
+</div>
+<span class="font-label-md text-label-md font-medium text-secondary">Estetik &amp; Tenang</span>
+</div>
+</div>
+</section>
+<!-- Section 1: Fasilitas Unggulan Kafe -->
+<section class="px-gutter-mobile flex flex-col gap-space-md mb-space-xl" id="section-facilities">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-tertiary font-semibold uppercase tracking-wider">Fasilitas Kafe</span>
+<h2 class="font-headline-md text-headline-md text-secondary">Kenyamanan Tanpa Kompromi</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dirancang khusus untuk mendukung produktivitas, diskusi intim, dan relaksasi santai Anda.</p>
+</div>
+<div class="grid grid-cols-1 gap-3.5">
+<!-- 1. Wi-Fi Card -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">wifi</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">High-Speed Wi-Fi &amp; Work Friendly</h3>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">100 Mbps</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Koneksi internet stabil 100 Mbps tanpa putus. Atmosfer tenang, ideal bagi mahasiswa, remote worker, dan freelancer yang butuh fokus tinggi.
+          </p>
+</div>
+</div>
+<!-- 2. Power Outlets Card -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">power</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Banyak Stopkontak di Setiap Sudut</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Tak perlu berebut daya. Setiap meja indoor dan meja komunal panjang dilengkapi terminal listrik terintegrasi untuk laptop dan smartphone.
+          </p>
+</div>
+</div>
+<!-- 3. Meeting Room & Private Space -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex flex-col gap-3">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">meeting_room</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Meeting Room &amp; Private Space</h3>
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">10-15 Orang</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+              Ruang ber-AC privat kedap suara ringan, dilengkapi proyektor FHD/layar presentasi modern, whiteboard magnetik, dan paket hidangan kopi.
+            </p>
+</div>
+</div>
+<div class="w-full h-32 rounded-lg overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A modern minimalist private meeting room inside Arunika Crumbs &amp; Brew café. Natural warm wood table with 10 ergonomic chairs, sleek presentation display mounted on beige linen acoustic wall, warm spotlighting, glass partition, notepads and iced latte glasses on the table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE4lCGPxNBXYUKcItEp6SgdTeTvLdwgBVm0wAawd4dxmpwcHm16DZDN4v3elivSuDBAPwiCqIUNKO3EOzWsKSsfYmK8yC2M0lMqzDl36yJq7vZXae_ZzIQI0pa34eWeVI5Qk7MJrGqQnNNRaV9A5eFFoT99h7t6JCyuO8reu2RF791qjsPVRhs2qXNRx0s9xV0RlDs41ZXXxkj7TKGAbmJihTA9CJwwzbPo1GKDpEy"/>
+</div>
+</div>
+<!-- 4. Outdoor Garden Card -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">yard</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Smoking &amp; Outdoor Garden Area</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Area terbuka semi-alfresco yang teduh dengan vegetasi hijau tropis, sirkulasi udara alami yang segar, dan pencahayaan hangat saat senja.
+          </p>
+</div>
+</div>
+<!-- 5. Musholla Card -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">mosque</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Musholla Bersih &amp; Nyaman</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Tempat ibadah khusus terpisah yang higienis, wangi aromaterapi, dengan area wudhu tertutup, sajadah lembut, mukena, dan sarung bersih terawat.
+          </p>
+</div>
+</div>
+<!-- 6. Parking Card -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">local_parking</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Area Parkir Luas &amp; Aman</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Kemudahan parkir mobil dan motor di kompleks Ruko Promenade Merr Surabaya dengan pengawasan keamanan 24 jam dan penerangan prima.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Paket Layanan Khusus (Catering & Private Event) -->
+<section class="px-gutter-mobile flex flex-col gap-space-md mb-space-xl" id="section-catering">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-tertiary font-semibold uppercase tracking-wider">Solusi Acara</span>
+<h2 class="font-headline-md text-headline-md text-secondary">Paket Layanan Khusus</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dari gathering intim hingga sajian bakery premium untuk korporat, kami siapkan penuh kehangatan.</p>
+</div>
+<!-- Package 1: Gathering & Community -->
+<div class="rounded-2xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] overflow-hidden flex flex-col">
+<div class="h-44 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A warm community workshop and intimate gathering inside Arunika Crumbs &amp; Brew café. Guests smiling around a long wooden table decorated with freshly baked artisan pastries, cold brew bottles, notebook arrangements, and soft indoor plants. Warm daylight filtering through tall windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhfmrllN5eGyjwKMJdpj0TqG2WfUyZbIYQ1KXf5jTP-ldExZ51nHtUTQkNb0ptD2shAGSvrLllp9Snr9rOaiDLSxx_N-mrweXLEFc7-VnnPdqa3FfjJ7nFL2T1laOHOU-LwJdCfNzcnBderZETOiZBtFy1FoP2J4lRyOVlreOkoz4h97Uu56ph4wwwLDghbRrHnNsFhDh1boV_cG6QHC68Pv_h0A1hbaI3Gxd7cKX9"/>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary font-label-md text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
+          ★ Favorit Komunitas
+        </div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-baseline justify-between">
+<h3 class="font-headline-sm text-headline-sm text-secondary font-semibold">Event &amp; Community Gathering</h3>
+</div>
+<div class="inline-flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary-container">groups</span>
+<span>Kapasitas: <strong class="text-secondary">20 – 50 orang</strong></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Pilihan tepat untuk workshop kreatif, bedah buku, arisan keluarga, perayaan ulang tahun, atau sesi jejaring santai dengan atmosfer hangat.
+        </p>
+<!-- Feature List -->
+<div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+<span>Penataan meja fleksibel (U-shape / banquet / theater)</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+<span>Akses sound system kafe &amp; wireless mic jernih</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+<span>Bundling konsumsi: artisan pastries &amp; specialty coffee</span>
+</div>
+</div>
+<a class="mt-1 w-full h-12 rounded-xl bg-primary-container text-surface flex items-center justify-center gap-2 font-label-lg text-label-lg font-medium shadow-[0_4px_16px_rgba(83,97,36,0.2)] active:scale-[0.98] transition-all" href="https://wa.me/6285175474311?text=Halo%20Arunika,%20saya%20ingin%20konsultasi%20paket%20Event%20&amp;%20Community%20Gathering" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Konsultasi Acara via WA</span>
+</a>
+</div>
+</div>
+<!-- Package 2: Office & Catering Snack Box -->
+<div class="rounded-2xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] overflow-hidden flex flex-col">
+<div class="h-44 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Exquisite artisanal bakery snack boxes neatly prepared by Arunika Crumbs &amp; Brew. Golden brown flaky croissants, savory brioche sandwiches, fresh juice bottles, and mini drip bags packaged in chic eco-friendly kraft paper boxes with sage green Arunika branding labels, displayed on a warm linen tablecloth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4UzDs11tZCxB3UMwMp6mE0WfdXYrZmmA5ET233d6gh7H2hkGgG-7-QFDbtkRrKxv5TO7IxVZv7BMh35YHbJUKWC9KKkkWHuOgeU-rWMayfVhJb3GNa6YnLp03-KhggDc1x1L8Hzt6oaTLFIrouukwZmIKCqUUCmMZhuIFTQFm3Z1vHMNk3fLXeqHl5Fgq62TMgXr34B-ZE_vNX2VZhVKa9VtS1pxez968VPvAhFru"/>
+<div class="absolute top-3 right-3 bg-primary-container text-surface font-label-md text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-sm">
+          Korporat &amp; Kantor
+        </div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<h3 class="font-headline-sm text-headline-sm text-secondary font-semibold">Office &amp; Catering Snack Box</h3>
+<div class="inline-flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary-container">inventory_2</span>
+<span>Minimum Order: <strong class="text-secondary">Fleksibel (Mulai 10 Box)</strong></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Sajikan sentuhan berkelas pada meeting kantor, seminar, atau acara keluarga Anda dengan kudapan roti panggang harian dan kopi artisanal.
+        </p>
+<!-- Feature List -->
+<div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+<span>Pilihan croissant mentega Prancis, sourdough &amp; sandwich</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+<span>Pilihan kopi botolan 250ml atau signature iced tea</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+<span>Pengantaran on-time area Surabaya &amp; sekitarnya</span>
+</div>
+</div>
+<a class="mt-1 w-full h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center gap-2 font-label-lg text-label-lg font-medium hover:bg-surface-variant active:scale-[0.98] transition-all" href="https://wa.me/6285175474311?text=Halo%20Arunika,%20saya%20ingin%20memesan%20Paket%20Office%20&amp;%20Catering%20Snack%20Box" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Pesan Paket Catering</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 3: Alur Pemesanan & Reservasi Transparan -->
+<section class="px-gutter-mobile flex flex-col gap-space-md mb-space-xl" id="section-flow">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-tertiary font-semibold uppercase tracking-wider">Panduan Praktis</span>
+<h2 class="font-headline-md text-headline-md text-secondary">Bagaimana Cara Memesan?</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Langkah ringkas dan transparan untuk memesan meja, ruang rapat, maupun catering Anda.</p>
+</div>
+<!-- 3 Steps Cards -->
+<div class="flex flex-col gap-3">
+<!-- Step 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-4">
+<div class="w-9 h-9 rounded-full bg-primary-container text-surface flex items-center justify-center font-headline-sm text-[16px] font-bold shrink-0 shadow-sm">
+          1
+        </div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Pilih Layanan atau Menu</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Jelajahi menu digital kami atau tentukan kebutuhan ruangan, jumlah peserta, serta paket snack box yang diinginkan.
+          </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-4">
+<div class="w-9 h-9 rounded-full bg-primary-container text-surface flex items-center justify-center font-headline-sm text-[16px] font-bold shrink-0 shadow-sm">
+          2
+        </div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Hubungi WhatsApp Kami</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Kirimkan rincian pesanan, tanggal kedatangan/pengiriman, jam, serta jumlah tamu melalui template WhatsApp resmi kami.
+          </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex items-start gap-4">
+<div class="w-9 h-9 rounded-full bg-primary-container text-surface flex items-center justify-center font-headline-sm text-[16px] font-bold shrink-0 shadow-sm">
+          3
+        </div>
+<div class="flex flex-col min-w-0 flex-1">
+<h3 class="font-headline-sm text-[17px] text-secondary font-semibold">Konfirmasi Cepat oleh Staf</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Staf Arunika membalas dan mengonfirmasi ketersediaan tempat atau slot pesanan secara detail dan ramah.
+          </p>
+</div>
+</div>
+</div>
+<!-- Official Notice Callout -->
+<div class="p-3.5 rounded-xl bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+<strong class="text-secondary font-semibold">Catatan penting:</strong> Reservasi meja dan pesanan catering terkonfirmasi setelah staf kami mengirimkan invoice/verifikasi via WhatsApp.
+      </p>
+</div>
+</section>
+<!-- Section 4: Jam Operasional & Layanan Pemesanan -->
+<section class="px-gutter-mobile mb-space-xl">
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(120,87,68,0.06)] flex flex-col gap-4">
+<div class="flex items-center gap-2.5 pb-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[18px] text-secondary font-semibold">Jam Operasional &amp; Pemesanan</h3>
+<span class="font-label-md text-label-md text-on-surface-variant">Melayani setiap hari dengan penuh kehangatan</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="p-3 rounded-xl bg-surface flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] text-secondary font-semibold">Dine-In &amp; Takeaway</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Senin – Minggu (Setiap Hari)</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary-container">08.00 – 22.00 WIB</span>
+</div>
+<div class="p-3 rounded-xl bg-surface flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] text-secondary font-semibold">WhatsApp &amp; Catering Order</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Respons Cepat / Konsultasi</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary-container">08.00 – 21.00 WIB</span>
+</div>
+</div>
+<div class="pt-2 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">pin_drop</span>
+<div class="flex flex-col text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-medium text-secondary">Ruko Promenade, Jl. Dr. Ir. H. Soekarno</span>
+<span>Rungkut, Surabaya, Jawa Timur 60298</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Banner Hubungi Kami / Konsultasi Acara -->
+<section class="px-gutter-mobile mb-space-xl">
+<div class="rounded-2xl bg-primary-container text-surface p-5 shadow-[0_12px_32px_-4px_rgba(83,97,36,0.3)] flex flex-col gap-3 relative overflow-hidden">
+<!-- Decorative Organic Light Arc -->
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-surface-tint opacity-30 blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-ping"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary-fixed font-semibold">Layanan Respons Cepat</span>
+</div>
+<h3 class="font-headline-md text-[22px] text-surface font-semibold leading-snug">
+        Ada kebutuhan khusus untuk acara atau pesanan korporat?
+      </h3>
+<p class="font-body-sm text-body-sm text-surface/90 leading-relaxed">
+        Tim konsultan katering &amp; event Arunika siap membantu merancang susunan menu dan tata letak ruang terbaik sesuai anggaran Anda.
+      </p>
+<a class="mt-2 w-full h-12 rounded-xl bg-surface text-primary-container flex items-center justify-center gap-2 font-label-lg text-label-lg font-semibold shadow-md active:scale-[0.98] transition-all" href="https://wa.me/6285175474311?text=Halo%20Tim%20Arunika,%20saya%20ingin%20konsultasi%20layanan%20spesial%20event/catering." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Chat Tim Arunika (0851 7547 4311)</span>
+</a>
+</div>
+</section>
+<!-- Footer Arunika -->
+<footer class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col items-center text-center gap-3">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm font-semibold text-secondary">Arunika</span>
+<span class="font-label-md text-[10px] tracking-[0.25em] text-on-surface-variant font-semibold uppercase mt-0.5">CRUMBS &amp; BREW</span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant max-w-xs">
+      Menghadirkan kehangatan cita rasa artisan roti dan kopi kurasi di timur Surabaya.
+    </p>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">photo_camera</span>
+<span class="font-label-md text-label-md font-medium text-secondary">@arunika.crumbs</span>
+</div>
+<span class="font-label-md text-[11px] text-outline mt-2">
+      © 2025 Arunika Crumbs &amp; Brew. Seluruh hak cipta dilindungi.
+    </span>
+</footer>
+<!-- Local Micro-interactions Script -->
+<script>
+    (function() {
+      // Simple filter button interaction
+      const tabs = document.querySelectorAll('.filter-tab');
+      const secFacilities = document.getElementById('section-facilities');
+      const secCatering = document.getElementById('section-catering');
+      const secFlow = document.getElementById('section-flow');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('bg-primary-container', 'text-surface', 'shadow-[0_2px_8px_-1px_rgba(83,97,36,0.25)]');
+            t.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+          tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          tab.classList.add('bg-primary-container', 'text-surface', 'shadow-[0_2px_8px_-1px_rgba(83,97,36,0.25)]');
+
+          const target = tab.dataset.target;
+          if (target === 'facilities' && secFacilities) {
+            secFacilities.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else if (target === 'catering' && secCatering) {
+            secCatering.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else if (target === 'flow' && secFlow) {
+            secFlow.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else if (target === 'all') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        });
+      });
+    })();
+  </script>
+</div></main><aside class="fixed right-4 bottom-20 z-40 pb-safe"><a aria-label="Chat via WhatsApp" class="w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-primary-container text-surface flex items-center justify-center shadow-[0_12px_32px_-4px_rgba(120,87,68,0.22),0_4px_12px_-2px_rgba(120,87,68,0.12)] active:scale-95 transition-transform hover:opacity-95" href="https://wa.me/6285175474311" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[24px]">chat</span></a></aside><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(120,87,68,0.06)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="beranda" href="index.html"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-md text-[11px] mt-0.5">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="menu" href="menu.html"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-md text-[11px] mt-0.5">Menu</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] flex-1 transition-all text-primary-container font-semibold" data-path="layanan" href="layanan.html"><span class="material-symbols-outlined text-[22px]">room_service</span><span class="font-label-md text-[11px] mt-0.5">Layanan</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="reservasi" href="reservasi.html"><span class="material-symbols-outlined text-[22px]">event_seat</span><span class="font-label-md text-[11px] mt-0.5">Reservasi</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] flex-1 text-on-surface-variant hover:text-secondary transition-all" data-path="lokasi" href="lokasi.html"><span class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-md text-[11px] mt-0.5">Lokasi</span></a></div></nav><script src="integration.js"></script></body></html>

@@ -1,0 +1,248 @@
+/* Arunika — token warna (terang & gelap), komponen bersama, aksesibilitas.
+   Warna Tailwind dibaca dari variabel ini: rgb(var(--c-nama) / <alpha-value>). */
+:root {
+  --c-background: 255 249 238;
+  --c-caramel: 185 121 59;
+  --c-coffee-dark: 59 42 29;
+  --c-error: 186 26 26;
+  --c-error-container: 255 218 214;
+  --c-inverse-on-surface: 248 240 222;
+  --c-inverse-primary: 189 206 133;
+  --c-inverse-surface: 52 48 36;
+  --c-on-background: 30 27 17;
+  --c-on-error: 255 255 255;
+  --c-on-error-container: 147 0 10;
+  --c-on-primary: 255 255 255;
+  --c-on-primary-container: 203 220 145;
+  --c-on-primary-fixed: 23 30 0;
+  --c-on-primary-fixed-variant: 63 76 17;
+  --c-on-secondary: 255 255 255;
+  --c-on-secondary-container: 121 88 69;
+  --c-on-secondary-fixed: 45 22 7;
+  --c-on-secondary-fixed-variant: 94 64 46;
+  --c-on-surface: 30 27 17;
+  --c-on-surface-variant: 70 72 59;
+  --c-on-tertiary: 255 255 255;
+  --c-on-tertiary-container: 255 201 155;
+  --c-on-tertiary-fixed: 45 22 0;
+  --c-on-tertiary-fixed-variant: 107 59 0;
+  --c-outline: 118 120 106;
+  --c-outline-variant: 199 200 183;
+  --c-primary: 60 73 14;
+  --c-primary-container: 83 97 36;
+  --c-primary-fixed: 217 234 158;
+  --c-primary-fixed-dim: 189 206 133;
+  --c-secondary: 120 87 68;
+  --c-secondary-container: 254 209 185;
+  --c-secondary-fixed: 255 219 201;
+  --c-secondary-fixed-dim: 233 190 166;
+  --c-surface: 255 249 238;
+  --c-surface-bright: 255 249 238;
+  --c-surface-container: 245 237 219;
+  --c-surface-container-high: 239 232 214;
+  --c-surface-container-highest: 234 226 208;
+  --c-surface-container-low: 251 243 225;
+  --c-surface-container-lowest: 255 255 255;
+  --c-surface-dim: 225 217 200;
+  --c-surface-tint: 86 100 39;
+  --c-surface-variant: 234 226 208;
+  --c-tertiary: 103 56 0;
+  --c-tertiary-container: 133 78 18;
+  --c-tertiary-fixed: 255 220 192;
+  --c-tertiary-fixed-dim: 255 184 119;
+  color-scheme: light;
+}
+html.dark {
+  --c-background: 23 19 12;
+  --c-caramel: 217 150 79;
+  --c-coffee-dark: 241 230 211;
+  --c-error: 255 180 171;
+  --c-error-container: 147 0 10;
+  --c-inverse-on-surface: 45 40 29;
+  --c-inverse-primary: 83 97 36;
+  --c-inverse-surface: 236 227 207;
+  --c-on-background: 236 227 207;
+  --c-on-error: 105 0 5;
+  --c-on-error-container: 255 218 214;
+  --c-on-primary: 28 36 0;
+  --c-on-primary-container: 27 35 0;
+  --c-on-primary-fixed: 217 234 158;
+  --c-on-primary-fixed-variant: 189 206 133;
+  --c-on-secondary: 68 42 26;
+  --c-on-secondary-container: 254 209 185;
+  --c-on-secondary-fixed: 255 219 201;
+  --c-on-secondary-fixed-variant: 233 190 166;
+  --c-on-surface: 236 227 207;
+  --c-on-surface-variant: 205 197 176;
+  --c-on-tertiary: 74 40 0;
+  --c-on-tertiary-container: 255 201 155;
+  --c-on-tertiary-fixed: 255 220 192;
+  --c-on-tertiary-fixed-variant: 255 184 119;
+  --c-outline: 150 143 122;
+  --c-outline-variant: 74 68 53;
+  --c-primary: 189 206 133;
+  --c-primary-container: 163 181 98;
+  --c-primary-fixed: 63 76 17;
+  --c-primary-fixed-dim: 163 181 98;
+  --c-secondary: 233 190 166;
+  --c-secondary-container: 94 64 46;
+  --c-secondary-fixed: 94 64 46;
+  --c-secondary-fixed-dim: 233 190 166;
+  --c-surface: 23 19 12;
+  --c-surface-bright: 33 28 19;
+  --c-surface-container: 37 31 21;
+  --c-surface-container-high: 48 41 29;
+  --c-surface-container-highest: 59 51 38;
+  --c-surface-container-low: 31 26 17;
+  --c-surface-container-lowest: 15 12 7;
+  --c-surface-dim: 18 15 9;
+  --c-surface-tint: 189 206 133;
+  --c-surface-variant: 59 51 38;
+  --c-tertiary: 255 184 119;
+  --c-tertiary-container: 133 78 18;
+  --c-tertiary-fixed: 107 59 0;
+  --c-tertiary-fixed-dim: 255 184 119;
+  color-scheme: dark;
+}
+html { scroll-behavior: smooth; }
+body { transition: background-color .25s ease, color .25s ease; }
+
+/* Fokus keyboard yang jelas */
+:focus-visible { outline: 2px solid rgb(var(--c-primary-container)); outline-offset: 2px; border-radius: 6px; }
+html.dark :focus-visible { outline-color: rgb(var(--c-primary-fixed-dim)); }
+.sr-only-focusable:not(:focus) { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+
+/* Warna arbitrer yang perlu penyesuaian di mode gelap */
+html.dark .text-\[\#536124\] { color: rgb(var(--c-primary-container)); }
+html.dark .text-\[\#785744\] { color: rgb(var(--c-secondary)); }
+html.dark ::-webkit-scrollbar-thumb { background: #4a4435; }
+html.dark img { filter: brightness(.92); }
+
+/* Toggle bahasa ID | EN */
+.lang-toggle { display:inline-flex; align-items:center; padding:2px; border-radius:9999px; background: rgb(var(--c-surface-container)); }
+.lang-btn { min-width:36px; min-height:34px; padding:0 10px; border-radius:9999px; font-size:12px; font-weight:700; letter-spacing:.04em; color: rgb(var(--c-on-surface-variant)); transition: background-color .2s, color .2s; }
+.lang-btn[aria-pressed="true"] { background: rgb(var(--c-primary-container)); color: rgb(var(--c-on-primary)); }
+html:not(.dark) .lang-btn[aria-pressed="true"] { color:#fff; }
+.lang-btn:not([aria-pressed="true"]):hover { background: rgb(var(--c-surface-variant) / .6); }
+
+/* Badge keranjang */
+.cart-badge { position:absolute; top:2px; right:0; min-width:18px; height:18px; padding:0 4px; border-radius:9999px; background: rgb(var(--c-primary-container)); color:#fff; font-size:10px; font-weight:700; line-height:18px; text-align:center; }
+html.dark .cart-badge { color: rgb(var(--c-on-primary)); }
+.cart-badge[hidden] { display:none; }
+.cart-badge.bump { animation: bump .45s ease; }
+@keyframes bump { 30% { transform: scale(1.45); } 60% { transform: scale(.9); } }
+
+/* Toast konfirmasi */
+.arunika-toast { position:fixed; left:50%; bottom:92px; z-index:80; transform:translate(-50%, 16px); opacity:0; pointer-events:none;
+  display:flex; align-items:center; gap:8px; max-width:min(92vw, 420px); padding:10px 16px; border-radius:9999px;
+  background: rgb(var(--c-inverse-surface)); color: rgb(var(--c-inverse-on-surface)); font:500 14px/1.3 'DM Sans',sans-serif;
+  box-shadow:0 10px 30px -8px rgba(0,0,0,.35); transition: opacity .25s ease, transform .25s ease; }
+.arunika-toast.show { opacity:1; transform:translate(-50%, 0); }
+@media (min-width:768px){ .arunika-toast { bottom:32px; } }
+.arunika-toast .material-symbols-outlined { font-size:20px; color:#bdce85; }
+
+/* Tombol "ditambahkan" */
+.is-added { background: rgb(var(--c-primary-container)) !important; color: rgb(var(--c-on-primary)) !important; }
+html:not(.dark) .is-added { color:#fff !important; }
+
+/* Chip / pilihan reservasi */
+.opt-btn { transition: background-color .15s, color .15s, transform .1s; }
+.opt-btn[aria-pressed="true"], .opt-btn[aria-checked="true"], .tab-btn[aria-selected="true"] { background: rgb(var(--c-primary-container)); color:#fff; font-weight:600; box-shadow:0 2px 8px -1px rgba(83,97,36,.3); }
+html.dark .opt-btn[aria-pressed="true"], html.dark .tab-btn[aria-selected="true"] { color: rgb(var(--c-on-primary)); }
+.opt-btn:disabled { opacity:.38; cursor:not-allowed; text-decoration: line-through; }
+.opt-btn:active:not(:disabled) { transform: scale(.96); }
+.wa-cta[aria-disabled="true"] { opacity:.5; pointer-events:none; box-shadow:none; filter:grayscale(.3); }
+
+/* Bingkai pratinjau WhatsApp */
+.wa-frame { background:#efeae2; border:1px solid #d1d7db; color:#111b21; }
+.wa-frame .wa-bubble { background:#fff; color:#111b21; }
+html.dark .wa-frame { background:#0b141a; border-color:#233138; }
+html.dark .wa-frame .wa-bubble { background:#005c4b; color:#e9edef; border-color:#005c4b; }
+
+/* Stepper kuantitas */
+.qty-btn { width:32px; height:32px; border-radius:9999px; display:inline-flex; align-items:center; justify-content:center; background: rgb(var(--c-surface-container-high)); color: rgb(var(--c-secondary)); font-weight:700; transition: background-color .15s, transform .1s; }
+.qty-btn:hover:not(:disabled) { background: rgb(var(--c-primary-container)); color:#fff; }
+.qty-btn:disabled { opacity:.35; cursor:not-allowed; }
+.qty-btn:active:not(:disabled) { transform: scale(.9); }
+
+/* Accordion FAQ (satu terbuka) */
+.faq-a { display:grid; grid-template-rows:0fr; visibility:hidden; transition: grid-template-rows .28s ease, visibility 0s linear .28s; }
+.faq-a > div { overflow:hidden; }
+.faq-item[data-open="true"] .faq-a { grid-template-rows:1fr; visibility:visible; transition: grid-template-rows .28s ease; }
+.faq-icon { transition: transform .28s ease; }
+.faq-item[data-open="true"] .faq-icon { transform: rotate(180deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+
+/* Utilitas bersama (sebelumnya didefinisikan per halaman) */
+.fluid-container { width:100%; max-width:1280px; margin-inline:auto; padding-inline: clamp(1rem, 3.5vw, 3rem); }
+@media (min-width:1440px){ .fluid-container { max-width:1440px; } }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+.scrollbar-none::-webkit-scrollbar { display:none; }
+
+/* ---- Katalog menu: 1 kolom (HP), 2 kolom (tablet), 3 kolom (laptop/desktop >= 1100px) ---- */
+.menu-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; align-items: stretch; }
+@media (min-width: 640px)  { .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .menu-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.menu-grid > .menu-item-card { height: 100%; min-width: 0; }
+
+/* ---- Panel keranjang desktop (dibuka lewat tombol, tidak memakai kolom halaman) ---- */
+.cart-toggle { display: none; position: fixed !important; right: 1.5rem; bottom: 6.5rem; z-index: 45; }
+.desktop-cart { display: none; position: fixed !important; right: 1.5rem; bottom: 10.5rem; z-index: 45; width: 22rem; max-width: calc(100vw - 3rem); }
+.desktop-cart .sticky-cart-sidebar { position: static; max-height: min(65vh, 36rem); }
+@media (min-width: 1024px) {
+  .cart-toggle { display: inline-flex; }
+  .desktop-cart.is-open { display: block; }
+}
+.cart-toggle .cart-badge { position: static !important; background: #fff; color: #536124; }
+
+/* Atribut hidden selalu menang atas kelas display (flex/grid) */
+[hidden] { display: none !important; }
+
+/* ---- Reservasi: kalender inline ---- */
+.cal-grid { display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:4px; text-align:center; }
+.cal-wd { font-size:11px; font-weight:600; color: rgb(var(--c-on-surface-variant)); padding:4px 0; text-transform:uppercase; letter-spacing:.04em; }
+.cal-day { aspect-ratio:1/1; min-height:36px; border-radius:9999px; font-size:14px; font-weight:500; color: rgb(var(--c-on-surface)); transition: background-color .15s, color .15s, transform .1s; }
+.cal-day:hover:not(:disabled):not([aria-pressed="true"]) { background: rgb(var(--c-surface-variant)); }
+.cal-day.is-today { box-shadow: inset 0 0 0 1.5px rgb(var(--c-primary-container)); }
+.cal-day[aria-pressed="true"] { background: rgb(var(--c-primary-container)); color:#fff; font-weight:700; }
+html.dark .cal-day[aria-pressed="true"] { color: rgb(var(--c-on-primary)); }
+.cal-day:disabled { opacity:.3; cursor:not-allowed; }
+.cal-day:active:not(:disabled) { transform: scale(.92); }
+.cal-nav:disabled { opacity:.3; }
+
+/* ---- Reservasi: roda jam ala alarm (00-23 / 00-59) ---- */
+.wheel { --wh: 40px; position:relative; height: calc(var(--wh) * 5); width: 84px; overflow-y:auto; scroll-snap-type:y mandatory; overscroll-behavior:contain; scrollbar-width:none; padding-block: calc(var(--wh) * 2); outline:none;
+  -webkit-mask-image: linear-gradient(transparent, #000 30%, #000 70%, transparent); mask-image: linear-gradient(transparent, #000 30%, #000 70%, transparent); }
+.wheel::-webkit-scrollbar { display:none; }
+.wheel:focus-visible { box-shadow: 0 0 0 2px rgb(var(--c-primary-container)); border-radius:12px; }
+.wheel-item { height: var(--wh); line-height: var(--wh); scroll-snap-align:center; text-align:center; font-size:22px; font-weight:500; color: rgb(var(--c-on-surface-variant)); cursor:pointer; user-select:none; font-variant-numeric: tabular-nums; transition: color .12s, font-size .12s; }
+.wheel-item.is-sel { color: rgb(var(--c-primary-container)); font-weight:700; font-size:28px; }
+html.dark .wheel-item.is-sel { color: rgb(var(--c-primary)); }
+.wheel-wrap-band { pointer-events:none; }
+#wheel-h, #wheel-m { background-image: linear-gradient(rgb(var(--c-surface-variant) / .55), rgb(var(--c-surface-variant) / .55)); background-repeat:no-repeat; background-size:100% 40px; background-position:0 80px; border-radius:12px; }
+
+/* Reservasi: panel kalender & jam muncul sebagai popover di bawah kolom (bukan blok besar) */
+.pop-panel { position:absolute; z-index:40; top:calc(100% + 6px); left:0; width:min(19rem, calc(100vw - 3rem)); padding:12px; border-radius:16px;
+  background: rgb(var(--c-surface-container-lowest)); border:1px solid rgb(var(--c-outline-variant) / .6); box-shadow:0 16px 40px -8px rgba(60,40,25,.28); }
+.pop-panel[hidden] { display:none; }
+.pop-panel-time { width:min(15rem, calc(100vw - 3rem)); }
+#date-wrap:has(.pop-panel:not([hidden])), #time-wrap:has(.pop-panel:not([hidden])) { z-index:45; }
+@media (min-width:640px) { #time-wrap .pop-panel { left:auto; right:0; } }
+.pop-panel .cal-day { min-height:32px; font-size:13px; }
+.pop-panel .wheel { width:72px; }
+.pop-panel .wheel-item.is-sel { font-size:24px; }
+html.dark .pop-panel { background: rgb(var(--c-surface-container-high)); }
+
+/* Cetak / simpan PDF hanya struk */
+@media print {
+  body * { visibility: hidden !important; }
+  #receipt-overlay, #receipt-overlay * { visibility: visible !important; }
+  #receipt-overlay { position: absolute !important; inset: 0 auto auto 0 !important; width: 100% !important; background: #fff !important; padding: 0 !important; overflow: visible !important; }
+  #receipt-overlay .no-print { display: none !important; }
+  #receipt-overlay .receipt-sheet { box-shadow: none !important; border: 0 !important; max-width: 80mm !important; margin: 0 auto !important; }
+}
